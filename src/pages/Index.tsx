@@ -5,24 +5,17 @@ import ScrollingText from '@/components/ScrollingText';
 import ClientPhotos from '@/components/ClientPhotos';
 import GoogleReviews from '@/components/GoogleReviews';
 import FAQ from '@/components/FAQ';
-
 const Index = () => {
-  const scrollingTexts = [
-    "O FUTURO COMEÇA HOJE",
-    "VENDA A SUA CASA PELO MELHOR PREÇO",
-    "O FUTURO COMEÇA HOJE",
-    "VENDA A SUA CASA PELO MELHOR PREÇO"
-  ];
-
+  const scrollingTexts = ["O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO", "O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO"];
   const scrollToForm = () => {
     const formElement = document.getElementById('evaluation-form');
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
+      formElement.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen bg-hero-gradient flex items-center justify-center px-4">
         <div className="container mx-auto max-w-6xl">
@@ -31,9 +24,7 @@ const Index = () => {
             {/* Left Column - Content */}
             <div className="text-center lg:text-left">
               <div className="mb-6">
-                <div className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold mb-6">
-                  AVALIAÇÃO 100% GRATUITA / AVALIAÇÃO 100% GRATUITA
-                </div>
+                
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -45,12 +36,7 @@ const Index = () => {
                 com base no mercado atual para poder pedir o preço justo e evitar surpresas na hora de vender.
               </p>
               
-              <Button 
-                variant="cta" 
-                size="lg"
-                onClick={scrollToForm}
-                className="text-xl px-8 py-6"
-              >
+              <Button variant="cta" size="lg" onClick={scrollToForm} className="text-xl px-8 py-6">
                 QUERO UMA AVALIAÇÃO 100% GRATUITA
               </Button>
             </div>
@@ -74,12 +60,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-center">
         <div className="container mx-auto px-4">
-          <Button 
-            variant="cta" 
-            size="lg"
-            onClick={scrollToForm}
-            className="text-xl px-8 py-6"
-          >
+          <Button variant="cta" size="lg" onClick={scrollToForm} className="text-xl px-8 py-6">
             QUERO UMA AVALIAÇÃO 100% GRATUITA
           </Button>
         </div>
@@ -101,12 +82,7 @@ const Index = () => {
             Receba uma avaliação gratuita e profissional em menos de 24 horas, 
             sem qualquer compromisso da sua parte.
           </p>
-          <Button 
-            variant="cta" 
-            size="lg"
-            onClick={scrollToForm}
-            className="text-xl px-8 py-6"
-          >
+          <Button variant="cta" size="lg" onClick={scrollToForm} className="text-xl px-8 py-6">
             QUERO UMA AVALIAÇÃO 100% GRATUITA
           </Button>
         </div>
@@ -123,8 +99,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
