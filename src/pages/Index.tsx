@@ -31,17 +31,17 @@ const Index = () => {
             {/* Left Column - Content */}
             <div className="text-center lg:text-left">
               <div className="mb-6">
-                <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <div className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold mb-6">
                   AVALIAÇÃO 100% GRATUITA / AVALIAÇÃO 100% GRATUITA
                 </div>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="text-accent">🟢</span> Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
+                Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-                <span className="text-accent">🟡</span> Deixe o seu contacto e receba uma avaliação precisa da sua casa, 
+                Deixe o seu contacto e receba uma avaliação precisa da sua casa, 
                 com base no mercado atual para poder pedir o preço justo e evitar surpresas na hora de vender.
               </p>
               
@@ -63,7 +63,7 @@ const Index = () => {
         </div>
 
         {/* Scrolling Text */}
-        <div className="absolute bottom-0 left-0 right-0 bg-accent text-accent-foreground py-4">
+        <div className="absolute bottom-0 left-0 right-0 bg-primary text-primary-foreground py-4">
           <ScrollingText texts={scrollingTexts} className="text-lg font-bold" />
         </div>
       </section>
@@ -118,7 +118,7 @@ const Index = () => {
           <p className="text-lg font-medium">
             © 2025 Mário Caetano - Consultor Imobiliário RE/MAX
           </p>
-          <div className="mt-4 bg-accent text-accent-foreground py-2">
+          <div className="mt-4 bg-primary text-primary-foreground py-2">
             <ScrollingText texts={scrollingTexts} className="text-sm font-medium" />
           </div>
         </div>

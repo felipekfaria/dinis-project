@@ -41,7 +41,7 @@ const GoogleReviews: React.FC = () => {
             <span className="text-2xl font-bold text-foreground">EXCELENTE</span>
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+                <Star key={i} className="w-6 h-6 fill-primary text-primary" />
               ))}
             </div>
           </div>
@@ -60,8 +60,8 @@ const GoogleReviews: React.FC = () => {
           {reviews.map((review) => (
             <div key={review.id} className="bg-card p-6 rounded-lg shadow-md border">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
-                  <span className="text-accent font-bold text-lg">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">
                     {review.name.charAt(0)}
                   </span>
                 </div>
@@ -69,7 +69,7 @@ const GoogleReviews: React.FC = () => {
                   <h4 className="font-semibold text-foreground">{review.name}</h4>
                   <div className="flex">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                 </div>

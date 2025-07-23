@@ -18,7 +18,7 @@ const ClientPhotos: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {clients.map((client) => (
             <div key={client.id} className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-accent shadow-lg">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary shadow-lg">
                 <img
                   src={client.image}
                   alt={client.name}
