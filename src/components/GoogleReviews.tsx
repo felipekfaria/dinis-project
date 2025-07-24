@@ -56,28 +56,30 @@ const GoogleReviews: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {reviews.map((review) => (
-            <div key={review.id} className="bg-card p-6 rounded-lg shadow-md border">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">
-                    {review.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">{review.name}</h4>
-                  <div className="flex">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-4" style={{ scrollSnapType: 'x mandatory' }}>
+            {reviews.map((review) => (
+              <div key={review.id} className="bg-card p-6 rounded-lg shadow-md border min-w-[300px] flex-shrink-0" style={{ scrollSnapAlign: 'start' }}>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-primary font-bold text-lg">
+                      {review.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">{review.name}</h4>
+                    <div className="flex">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <p className="text-muted-foreground text-sm mb-2">{review.comment}</p>
+                <p className="text-xs text-muted-foreground">{review.date}</p>
               </div>
-              <p className="text-muted-foreground text-sm mb-2">{review.comment}</p>
-              <p className="text-xs text-muted-foreground">{review.date}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

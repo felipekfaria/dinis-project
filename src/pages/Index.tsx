@@ -16,6 +16,20 @@ const Index = () => {
     }
   };
   return <div className="min-h-screen">
+      {/* Red Stripe */}
+      <div className="bg-red-stripe text-white py-3 overflow-hidden">
+        <div className="whitespace-nowrap">
+          <div className="animate-scroll inline-block">
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+            <span className="text-lg font-bold mx-8">AVALIAÇÃO 100% GRATUITA</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative min-h-screen bg-hero-gradient flex items-center justify-center px-4">
         <div className="container mx-auto max-w-6xl">
