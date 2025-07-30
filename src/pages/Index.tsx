@@ -46,7 +46,7 @@ const Index = () => {
             {/* ========================================================== */}
             <div id="evaluation-form-section"> {/* Adicionei o ID aqui para o scroll */}
               <div className="text-center lg:text-left">
-                <h1 className="text-2xl md:text-2xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                   Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
                 </h1>
                 
