@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button'; // O botão de scroll foi removido
 import EvaluationForm from '@/components/EvaluationForm';
 import ScrollingText from '@/components/ScrollingText';
 import ClientPhotos from '@/components/ClientPhotos';
@@ -10,85 +10,67 @@ import consultantImage from '@/assets/mariocaetano.png';
 
 const Index = () => {
   const scrollingTexts = ["O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO", "O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO"];
-  const scrollToForm = () => {
-    const formElement = document.getElementById('evaluation-form-section'); 
-    if (formElement) {
-      formElement.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
-  return <div className="min-h-screen">
-      {/* Red Stripe (Sem alterações) */}
+  // A função scrollToForm foi removida pois não há mais botão de scroll
+
+  return (
+    <div className="min-h-screen">
+      {/* Red Stripe */}
       <div className="bg-red-stripe text-white py-2 md:py-3 overflow-hidden">
-        <div className="whitespace-nowrap">
-            <div className="animate-scroll inline-block">
-                <span className="text-sm md:text-lg font-bold mx-4 md:mx-8">AVALIAÇÃO 100% GRATUITA</span>
-                <span className="text-sm md:text-lg font-bold mx-4 md:mx-8">AVALIAÇÃO 100% GRATUITA</span>
-                <span className="text-sm md:text-lg font-bold mx-4 md:mx-8">AVALIAÇÃO 100% GRATUITA</span>
-                <span className="text-sm md:text-lg font-bold mx-4 md:mx-8">AVALIAÇÃO 100% GRATUITA</span>
-            </div>
-        </div>
+        {/* ... */}
       </div>
 
-      {/* Hero Section - Agora Otimizada para Mobile */}
+      {/* Hero Section */}
       <section className="relative min-h-screen bg-hero-gradient flex items-center justify-center px-4 py-16">
         <div className="container mx-auto max-w-7xl">
-          {/* O container principal agora é um Grid que vai reposicionar os seus filhos no desktop */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* ========================================================== */}
-            {/* Bloco 1 (Mobile): IMAGEM                                 */}
-            {/* ========================================================== */}
-            {/* No Desktop: Esta div será movida para a coluna 2, linha 1, e ocupará 2 linhas de altura. */}
-            <div className="mb-10 lg:mb-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex items-end justify-center">
+            {/* Coluna Esquerda: Conteúdo Estratégico */}
+            <div>
+              <div className="text-center lg:text-left animate-fade-in-up">
+                
+                {/* 1. H1 REFINADO: Foco no benefício máximo */}
+                <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                  Venda a sua casa pelo
+                  <span className="bg-gradient-to-r from-amber-300 to-yellow-500 text-transparent bg-clip-text"> valor máximo</span>, sem complicações.
+                </h1>
+                
+                {/* 2. SUBTÍTULO REFINADO: Foco na confiança e na ausência de risco */}
+                <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+                  Receba uma análise estratégica e gratuita para tomar a melhor decisão, <span className="font-semibold text-white">sem qualquer compromisso</span>.
+                </p>
+              </div>
+
+              {/* 3. CARD DO FORMULÁRIO REFINADO: Foco na ação positiva */}
+              <div id="evaluation-form-section" className="bg-black/25 backdrop-blur-lg p-8 rounded-2xl border border-white/20 animate-fade-in-up animation-delay-300">
+                <div className='text-center mb-6'>
+                    <h2 className='text-2xl font-bold text-white'>O primeiro passo para um bom negócio.</h2>
+                    <p className='text-white/70'>É rápido, gratuito e 100% confidencial.</p>
+                </div>
+                <EvaluationForm />
+              </div>
+            </div>
+
+            {/* Coluna Direita: Imagem */}
+            <div className="hidden lg:flex items-end justify-center animate-fade-in animation-delay-500">
               <img 
                 src={consultantImage} 
                 alt="Consultor Imobiliário Mário Caetano"
-                className="max-w-xs sm:max-w-sm lg:max-w-2xl mx-auto"
+                className="max-w-xl w-full" 
               />
             </div>
-            
-            {/* ========================================================== */}
-            {/* Bloco 2 (Mobile): TEXTOS                                 */}
-            {/* ========================================================== */}
-            {/* No Desktop: Esta div irá para a coluna 1, linha 1. */}
-            <div className="text-center lg:text-left lg:col-start-1 lg:row-start-1">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-                Saiba o valor da sua casa de forma simples, gratuita e sem complicações.
-              </h1>
-              
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                Deixe o seu contacto e receba uma avaliação precisa da sua casa, 
-                com base no mercado atual para poder pedir o preço justo e evitar surpresas na hora de vender.
-              </p>
-            </div>
-            
-            {/* ========================================================== */}
-            {/* Bloco 3 (Mobile): FORMULÁRIO                             */}
-            {/* ========================================================== */}
-            {/* No Desktop: Esta div irá para a coluna 1, linha 2. */}
-            <div id="evaluation-form-section" className="bg-black/20 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mt-10 lg:col-start-1 lg:row-start-2">
-              <div className='text-center mb-6'>
-                  <h2 className='text-2xl font-bold text-white'>Avaliação Gratuita</h2>
-                  <p className='text-white/70'>Preencha os dados abaixo e receba a sua avaliação em 24h</p>
-              </div>
-              <EvaluationForm />
-            </div>
-
           </div>
         </div>
 
-        {/* Scrolling Text (Sem alterações) */}
+        {/* Scrolling Text */}
         <div className="absolute bottom-0 left-0 right-0 bg-primary text-primary-foreground py-2 md:py-4">
           <ScrollingText texts={scrollingTexts} className="text-sm md:text-lg font-bold" />
         </div>
       </section>
 
-      {/* O resto da página continua igual... */}
       <ClientPhotos />
       <FAQ />
-      {/* ... */}
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
