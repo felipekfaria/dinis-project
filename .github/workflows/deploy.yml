@@ -27,15 +27,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'bun' # Mude para 'npm' se não usar bun
+
+      # ==========================================================
+      # CORREÇÃO PRINCIPAL AQUI: Usamos a ferramenta oficial do Bun
+      # ==========================================================
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+
       - name: Install dependencies
-        run: bun install # Mude para 'npm install' se não usar bun
+        run: bun install
       - name: Build
-        run: bun run build # Mude para 'npm run build' se não usar bun
+        run: bun run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
