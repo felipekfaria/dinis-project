@@ -71,7 +71,7 @@ const Index = () => {
               <img 
                 src={consultantImage} 
                 alt="Consultor Imobiliário Mário Caetano"
-                className="max-w-md w-full"
+                className="max-w-lg xl:max-w-xl w-full h-auto"
               />
             </div>
           </div>
