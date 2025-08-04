@@ -2,38 +2,28 @@
 name: Deploy static content to Pages
 
 on:
-  # Corre sempre que fizer push para a branch "main"
   push:
     branches: ["main"]
-
-  # Permite que você execute este workflow manualmente na aba "Actions"
   workflow_dispatch:
 
-# Define as permissões necessárias para o deploy
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite apenas um deploy de cada vez
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Tarefa de construção
+  # Tarefa de construção (build)
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # ==========================================================
-      # CORREÇÃO PRINCIPAL AQUI: Usamos a ferramenta oficial do Bun
-      # ==========================================================
       - name: Set up Bun
         uses: oven-sh/setup-bun@v1
-
       - name: Install dependencies
         run: bun install
       - name: Build
@@ -43,8 +33,20 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Faz o upload da pasta 'dist' que o build cria
           path: './dist'
+
+  # Tarefa de deploy
+  deploy:
+    # 1. ESTA PARTE É A MAIS IMPORTANTE
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    # Esta tarefa precisa da tarefa 'build' para terminar primeiro
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
