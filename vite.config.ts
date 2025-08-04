@@ -1,13 +1,11 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // ==========================================================
-  // A ÚNICA ALTERAÇÃO É ESTA LINHA
-  // ==========================================================
+  // GARANTA QUE ESTA LINHA EXISTE E ESTÁ CORRETA
   base: '/dinis-project/',
   
   server: {
