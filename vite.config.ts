@@ -5,6 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // ==========================================================
+  // A ÚNICA ALTERAÇÃO É ESTA LINHA
+  // ==========================================================
+  base: '/dinis-project/',
+  
   server: {
     host: "::",
     port: 8080,
