@@ -7,7 +7,7 @@ import GoogleReviews from '@/components/GoogleReviews';
 import FAQ from '@/components/FAQ';
 
 // A importação da imagem continua correta
-import consultantImage from '@/assets/4.png';
+import consultantImage from '@/assets/mariocaetano.png';
 
 const Index = () => {
   const scrollingTexts = ["O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO", "O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO"];
@@ -47,7 +47,7 @@ const Index = () => {
             <div id="evaluation-form-section"> {/* Adicionei o ID aqui para o scroll */}
               <div className="text-center lg:text-left">
                 <h1 className="text-2xl md:text-2xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                  Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
+                  Saiba o valor da sua casa de forma simples, gratuita e sem complicações.
                 </h1>
                 
                 <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 leading-relaxed">
