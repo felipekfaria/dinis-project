@@ -60,8 +60,7 @@ const FAQ: React.FC = () => {
                 }`}
               >
                 <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:no-underline py-6">
-                  <span className={`mr-4 ${index % 2 === 0 ? 'text-primary' : 'text-secondary-foreground'}`}>
-                    {index % 2 === 0 ? '🟢' : '🟡'}
+                  <span className={`mr-4 ${index % 2 === 0 ? 'text-primary' : 'text-secondary-foreground'}`}>              
                   </span>
                   {faq.question}
                 </AccordionTrigger>
