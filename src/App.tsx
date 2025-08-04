@@ -13,7 +13,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* ========================================================== */}
+      {/* A CORREÇÃO DEFINITIVA É ADICIONAR O 'basename' AQUI      */}
+      {/* ========================================================== */}
+      <BrowserRouter basename="/dinis-project/">
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
