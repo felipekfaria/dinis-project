@@ -5,8 +5,6 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // GARANTA QUE ESTA LINHA EXISTE E ESTÁ CORRETA
-  base: '/dinis-project/',
   
   server: {
     host: "::",
