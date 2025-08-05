@@ -99,7 +99,7 @@ const EvaluationForm: React.FC = () => {
       {/* ============================================== */}
       {/* CORREÇÃO ÚNICA E DEFINITIVA DO BOTÃO AQUI      */}
       {/* ============================================== */}
-      <Button type="submit" variant="cta" size="lg" className="w-full !mt-6 text-sm font-bold tracking-wider sm:text-base">
+      <Button type="submit" variant="cta" size="lg" className="w-full !mt-6 text-xs sm:text-sm font-bold tracking-wider px-4 py-3 h-auto whitespace-normal leading-tight">
         QUERO UMA AVALIAÇÃO GRATUITA
       </Button>
     </form>
