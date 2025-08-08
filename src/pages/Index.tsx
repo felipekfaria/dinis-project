@@ -39,23 +39,25 @@ const Index = () => {
             {/* Bloco 1 (Mobile): IMAGEM - Primeiro no código = primeiro no mobile */}
             {/* No Desktop: movido para a coluna 2 */}
             <div className="mb-10 lg:mb-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex items-end justify-center">
-              <img src={consultantImage} alt="Consultor Imobiliário Mário Caetano" className="max-w-xs sm:max-w-sm lg:max-w-xl mx-auto w-full" />
+              <img src={consultantImage} alt="Consultor Imobiliário Mário Caetano" className="max-w-sm sm:max-w-md lg:max-w-2xl mx-auto w-full" />
             </div>
             
             {/* Bloco 2 (Mobile): TEXTOS */}
             {/* No Desktop: posicionado na coluna 1, linha 1 */}
             <div className="text-center lg:text-left lg:col-start-1 lg:row-start-1">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
-                Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
+                Saiba o valor da sua casa{" "}
+                <span className="text-[hsl(var(--hero-accent))]">de forma simples, gratuita e sem complicações</span>{" "}
+                em 2025.
               </h1>
-              <p className="text-base sm:text-lg text-white/80 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-white/80 mb-4 leading-relaxed">
                 Deixe o seu contacto e receba uma avaliação precisa da sua casa, com base no mercado atual para poder pedir o preço justo e evitar surpresas na hora de vender.
               </p>
             </div>
             
             {/* Bloco 3 (Mobile): FORMULÁRIO */}
             {/* No Desktop: posicionado na coluna 1, linha 2 */}
-            <div id="evaluation-form-section" className="bg-black/25 backdrop-blur-lg p-6 sm:p-8 rounded-2xl border border-white/20 mt-6 lg:col-start-1 lg:row-start-2">
+            <div id="evaluation-form-section" className="bg-black/25 backdrop-blur-lg p-6 sm:p-8 rounded-2xl border border-white/20 mt-2 lg:col-start-1 lg:row-start-2">
               <div className='text-center mb-6'>
                 
                 
