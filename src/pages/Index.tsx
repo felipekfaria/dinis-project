@@ -45,7 +45,7 @@ const Index = () => {
             {/* Bloco 2 (Mobile): TEXTOS */}
             {/* No Desktop: posicionado na coluna 1, linha 1 */}
             <div className="text-center lg:text-left lg:col-start-1 lg:row-start-1">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight lg:text-4xl">
                 Saiba o valor da sua casa{" "}
                 <span className="text-[hsl(var(--hero-accent))]">de forma simples, gratuita e sem complicações</span>{" "}
                 em 2025.
