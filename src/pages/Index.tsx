@@ -7,7 +7,7 @@ import ClientPhotos from '@/components/ClientPhotos';
 import FAQ from '@/components/FAQ';
 import consultantImage from '@/assets/mariocaetano.png';
 const Index = () => {
-  const scrollingTexts = ["O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO"];
+  const scrollingTexts = ["O FUTURO COMEÇA HOJE", " l ", "VENDA A SUA CASA PELO MELHOR PREÇO", " l ", "O FUTURO COMEÇA HOJE", " l "];
   const scrollToForm = () => {
     const formElement = document.getElementById('evaluation-form-section');
     if (formElement) {
@@ -24,7 +24,7 @@ const Index = () => {
           <div className="animate-scroll inline-flex">
             {[...Array(6)].map((_, i) => <span key={i} className="flex items-center text-sm md:text-base font-bold mx-6">
                 <Flame className="h-5 w-5 mr-3 text-yellow-300 fill-current" />
-                AGENDA A FECHAR<span className="mx-3 opacity-50">|</span>VAGAS LIMITADAS
+                AVALIAÇÃO 100% GRATUITA<span className="mx-3 opacity-50">l</span>AVALIAÇÃO 100% GRATUITA
               </span>)}
           </div>
         </div>
