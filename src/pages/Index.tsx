@@ -56,11 +56,10 @@ const Index = () => {
             {/* No Desktop: posicionado na coluna 1, linha 1 */}
             <div className="text-center lg:text-left lg:col-start-1 lg:row-start-1">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
-                Venda a sua casa pelo
-                <span className="bg-gradient-to-r from-amber-300 to-yellow-500 text-transparent bg-clip-text"> valor máximo</span>, sem complicações.
+                Saiba o valor da sua casa de forma simples, gratuita e sem complicações em 2025.
               </h1>
               <p className="text-base sm:text-lg text-white/80 mb-8 leading-relaxed">
-                Receba uma análise estratégica e gratuita para tomar a melhor decisão, <span className="font-semibold text-white">sem qualquer compromisso</span>.
+                Deixe o seu contacto e receba uma avaliação precisa da sua casa, com base no mercado atual para poder pedir o preço justo e evitar surpresas na hora de vender.
               </p>
             </div>
             
