@@ -1,37 +1,31 @@
 import React from 'react';
 import { Flame, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 import EvaluationForm from '@/components/EvaluationForm';
 import ScrollingText from '@/components/ScrollingText';
 import ClientPhotos from '@/components/ClientPhotos';
 import FAQ from '@/components/FAQ';
-
 import consultantImage from '@/assets/mariocaetano.png';
-
 const Index = () => {
   const scrollingTexts = ["O FUTURO COMEÇA HOJE", "VENDA A SUA CASA PELO MELHOR PREÇO"];
-
   const scrollToForm = () => {
     const formElement = document.getElementById('evaluation-form-section');
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
+      formElement.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       
       {/* Faixa Vermelha Estratégica */}
       <div className="bg-red-stripe text-white py-2.5 md:py-3 overflow-hidden">
         <div className="whitespace-nowrap">
           <div className="animate-scroll inline-flex">
-            {[...Array(6)].map((_, i) => (
-              <span key={i} className="flex items-center text-sm md:text-base font-bold mx-6">
+            {[...Array(6)].map((_, i) => <span key={i} className="flex items-center text-sm md:text-base font-bold mx-6">
                 <Flame className="h-5 w-5 mr-3 text-yellow-300 fill-current" />
                 AGENDA A FECHAR<span className="mx-3 opacity-50">|</span>VAGAS LIMITADAS
-              </span>
-            ))}
+              </span>)}
           </div>
         </div>
       </div>
@@ -45,11 +39,7 @@ const Index = () => {
             {/* Bloco 1 (Mobile): IMAGEM - Primeiro no código = primeiro no mobile */}
             {/* No Desktop: movido para a coluna 2 */}
             <div className="mb-10 lg:mb-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex items-end justify-center">
-              <img 
-                src={consultantImage} 
-                alt="Consultor Imobiliário Mário Caetano"
-                className="max-w-xs sm:max-w-sm lg:max-w-xl mx-auto w-full"
-              />
+              <img src={consultantImage} alt="Consultor Imobiliário Mário Caetano" className="max-w-xs sm:max-w-sm lg:max-w-xl mx-auto w-full" />
             </div>
             
             {/* Bloco 2 (Mobile): TEXTOS */}
@@ -67,8 +57,8 @@ const Index = () => {
             {/* No Desktop: posicionado na coluna 1, linha 2 */}
             <div id="evaluation-form-section" className="bg-black/25 backdrop-blur-lg p-6 sm:p-8 rounded-2xl border border-white/20 mt-6 lg:col-start-1 lg:row-start-2">
               <div className='text-center mb-6'>
-                <h2 className='text-xl sm:text-2xl font-bold text-white'>O primeiro passo para um bom negócio.</h2>
-                <p className='text-sm sm:text-base text-white/70'>É rápido, gratuito e 100% confidencial.</p>
+                
+                
               </div>
               <EvaluationForm />
             </div>
@@ -131,8 +121,6 @@ const Index = () => {
             </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

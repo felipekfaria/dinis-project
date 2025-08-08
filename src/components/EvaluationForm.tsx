@@ -14,41 +14,48 @@ const EvaluationForm: React.FC = () => {
     tipoImovel: '',
     localizacao: ''
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.nome || !formData.email || !formData.telemovel || !formData.tipoImovel || !formData.localizacao) {
       toast({
         title: "Campos obrigatórios",
         description: "Por favor preencha todos os campos para prosseguir.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
     toast({
       title: "Pedido enviado com sucesso!",
-      description: "Receberá a sua avaliação gratuita em menos de 24 horas.",
+      description: "Receberá a sua avaliação gratuita em menos de 24 horas."
     });
-    setFormData({ nome: '', email: '', telemovel: '', tipoImovel: '', localizacao: '' });
+    setFormData({
+      nome: '',
+      email: '',
+      telemovel: '',
+      tipoImovel: '',
+      localizacao: ''
+    });
+  };
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-  
   // Estilo ajustado para os inputs funcionarem bem dentro do novo card
   const inputContainerClass = "relative";
   const inputClass = "bg-white/10 border-white/20 text-white placeholder:text-white/60 pl-10";
   const iconClass = "absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-white/60";
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+  return <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-1">
         <Label htmlFor="nome" className="sr-only">Nome Completo</Label>
         <div className={inputContainerClass}>
             <User className={iconClass} />
-            <Input id="nome" type="text" placeholder="O seu nome completo" value={formData.nome} onChange={(e) => handleInputChange('nome', e.target.value)} className={inputClass} required />
+            <Input id="nome" type="text" placeholder="O seu nome completo" value={formData.nome} onChange={e => handleInputChange('nome', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
@@ -56,7 +63,7 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="email" className="sr-only">Email</Label>
          <div className={inputContainerClass}>
             <Mail className={iconClass} />
-            <Input id="email" type="email" placeholder="seuemail@exemplo.com" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} className={inputClass} required />
+            <Input id="email" type="email" placeholder="seuemail@exemplo.com" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
@@ -64,7 +71,7 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="telemovel" className="sr-only">Telemóvel</Label>
          <div className={inputContainerClass}>
             <Smartphone className={iconClass} />
-            <Input id="telemovel" type="tel" placeholder="+351 9xx xxx xxx" value={formData.telemovel} onChange={(e) => handleInputChange('telemovel', e.target.value)} className={inputClass} required />
+            <Input id="telemovel" type="tel" placeholder="+351 9xx xxx xxx" value={formData.telemovel} onChange={e => handleInputChange('telemovel', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
@@ -72,7 +79,7 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="tipoImovel" className="sr-only">Tipo de Imóvel</Label>
          <div className={inputContainerClass}>
             <Home className={iconClass} />
-            <Select onValueChange={(value) => handleInputChange('tipoImovel', value)} required>
+            <Select onValueChange={value => handleInputChange('tipoImovel', value)} required>
               <SelectTrigger className={inputClass}>
                 <SelectValue placeholder="Selecione o tipo de imóvel" />
               </SelectTrigger>
@@ -92,18 +99,14 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="localizacao" className="sr-only">Localização</Label>
         <div className={inputContainerClass}>
             <MapPin className={iconClass} />
-            <Input id="localizacao" type="text" placeholder="Cidade, distrito ou código postal" value={formData.localizacao} onChange={(e) => handleInputChange('localizacao', e.target.value)} className={inputClass} required />
+            <Input id="localizacao" type="text" placeholder="Cidade, distrito ou código postal" value={formData.localizacao} onChange={e => handleInputChange('localizacao', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
       {/* ============================================== */}
       {/* CORREÇÃO ÚNICA E DEFINITIVA DO BOTÃO AQUI      */}
       {/* ============================================== */}
-      <Button type="submit" variant="cta" size="lg" className="w-full !mt-6 text-xs sm:text-sm font-bold tracking-wider px-4 py-3 h-auto whitespace-normal leading-tight">
-        QUERO UMA AVALIAÇÃO GRATUITA
-      </Button>
-    </form>
-  );
+      <Button type="submit" variant="cta" size="lg" className="w-full !mt-6 text-xs sm:text-sm font-bold tracking-wider px-4 py-3 h-auto whitespace-normal leading-tight">QUERO UMA AVALIAÇÃO 100% GRATUITA</Button>
+    </form>;
 };
-
 export default EvaluationForm;
