@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================================== */
+/* Adicionámos a declaração das suas fontes aqui             */
+/* ========================================================== */
+@layer base {
+  @font-face {
+    font-family: 'Gotham'; /* Nome que damos à nossa família de fontes */
+    src: url('@/assets/fonts/iCielGotham-Thin.otf') format('opentype');
+    font-weight: 300; /* Thin */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gotham';
+    src: url('@/assets/fonts/iCielGotham-Medium.otf') format('opentype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gotham';
+    src: url('@/assets/fonts/iCielGotham-Ultra.otf') format('opentype');
+    font-weight: 900; /* Ultra/Black */
+    font-style: normal;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
