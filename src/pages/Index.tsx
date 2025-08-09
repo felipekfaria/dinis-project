@@ -10,14 +10,14 @@ import consultantImage from '@/assets/mariocaetano.png';
 
 const Index = () => {
   const scrollingTexts = [
-    <span key={1} className="font-extrabold tracking-tight">O FUTURO <span className="text-[#61d6ff]">COMEÇA HOJE</span></span>,
-    <span key={2} className='font-extrabold tracking-tight mx-4 opacity-70'>|</span>,
-    <span key={3} className="font-extrabold tracking-tight">VENDA A SUA CASA PELO <span className="text-[#61d6ff]">MELHOR PREÇO</span></span>,
-    <span key={4} className='font-extrabold tracking-tight mx-4 opacity-70'>|</span>,
-    <span key={5} className="font-extrabold tracking-tight">O FUTURO <span className="text-[#61d6ff]">COMEÇA HOJE</span></span>,
-    <span key={6} className='font-extrabold tracking-tight mx-4 opacity-70'>|</span>,
-    <span key={7} className="font-extrabold tracking-tight">VENDA A SUA CASA PELO <span className="text-[#61d6ff]">MELHOR PREÇO</span></span>,
-    <span key={8} className='font-extrabold tracking-tight mx-4 opacity-70'>|</span>
+    <span key={1} className="font-gotham font-black tracking-tight">O FUTURO <span className="text-[#61d6ff]">COMEÇA HOJE</span></span>,
+    <span key={2} className='font-gotham font-black tracking-tight mx-4 opacity-70'>|</span>,
+    <span key={3} className="font-gotham font-black tracking-tight">VENDA A SUA CASA PELO <span className="text-[#61d6ff]">MELHOR PREÇO</span></span>,
+    <span key={4} className='font-gotham font-black tracking-tight mx-4 opacity-70'>|</span>,
+    <span key={5} className="font-gotham font-black tracking-tight">O FUTURO <span className="text-[#61d6ff]">COMEÇA HOJE</span></span>,
+    <span key={6} className='font-gotham font-black tracking-tight mx-4 opacity-70'>|</span>,
+    <span key={7} className="font-gotham font-black tracking-tight">VENDA A SUA CASA PELO <span className="text-[#61d6ff]">MELHOR PREÇO</span></span>,
+    <span key={8} className='font-gotham font-black tracking-tight mx-4 opacity-70'>|</span>
   ];
 
   const scrollToForm = () => {
@@ -31,10 +31,10 @@ const Index = () => {
 
   return <div className="min-h-screen">
       
-      <div className="bg-red-stripe text-white py-2.5 md:py-3 overflow-hidden">
+      <div className="bg-red-stripe text-white py-2.5 md:py-3 overflow-hidden font-gotham">
         <div className="whitespace-nowrap">
           <div className="animate-scroll inline-flex">
-            {[...Array(6)].map((_, i) => <span key={i} className="flex items-center text-sm md:text-base font-bold mx-6">
+            {[...Array(6)].map((_, i) => <span key={i} className="flex items-center text-sm md:text-base font-black mx-6">
                 AVALIAÇÃO 100% GRATUITA<span className="mx-3 opacity-50">l</span>AVALIAÇÃO 100% GRATUITA
               </span>)}
           </div>
@@ -54,7 +54,7 @@ const Index = () => {
                 {/* ========================================================== */}
                 {/* ADICIONADA A CLASSE font-gotham AO H1                    */}
                 {/* ========================================================== */}
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight lg:text-4xl font-gotham">
+                <h1 className="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight lg:text-4xl font-gotham">
                   Saiba o valor da sua casa{" "}
                   <span className="text-[hsl(var(--hero-accent))]">de forma simples, gratuita e sem complicações</span>{" "}
                   em 2025.
@@ -73,7 +73,7 @@ const Index = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 bg-primary text-primary-foreground py-2 md:py-4">
-          <ScrollingText texts={scrollingTexts} />
+          <ScrollingText texts={scrollingTexts} className="font-gotham font-black" />
         </div>
       </section>
 

@@ -11,18 +11,21 @@
     src: url('@/assets/fonts/iCielGotham-Thin.otf') format('opentype');
     font-weight: 300; /* Thin */
     font-style: normal;
+    font-display: swap;
   }
   @font-face {
     font-family: 'Gotham';
     src: url('@/assets/fonts/iCielGotham-Medium.otf') format('opentype');
     font-weight: 500; /* Medium */
     font-style: normal;
+    font-display: swap;
   }
   @font-face {
     font-family: 'Gotham';
     src: url('@/assets/fonts/iCielGotham-Ultra.otf') format('opentype');
     font-weight: 900; /* Ultra/Black */
     font-style: normal;
+    font-display: swap;
   }
 }
 
