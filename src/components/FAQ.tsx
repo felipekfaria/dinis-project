@@ -84,7 +84,7 @@ const FAQ: React.FC = () => {
                   value={faq.id}
                   className="bg-[#0d1b2a] rounded-lg border-none"
                 >
-                  <AccordionTrigger className="w-full text-white font-semibold justify-center text-lg text-center py-4 px-6 hover:no-underline [&>svg]:hidden">
+                  <AccordionTrigger className="w-full text-white font-gotham font-black justify-center text-lg text-center py-4 px-6 hover:no-underline [&>svg]:hidden">
                     {faq.question}
                   </AccordionTrigger>
 
