@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button'; // Importamos o Button
+import { Button } from '@/components/ui/button';
 
 // Imports das suas imagens
 import newClient1 from '@/assets/474625330_1429740884668950_8305339077519804079_n.jpg';
@@ -45,7 +45,7 @@ const ClientPhotos: React.FC = () => {
     }
   };
 
-  return <div className="py-16 bg-white"> {/* Mudei o fundo para branco como na referência */}
+  return <div className="py-16 bg-white">
       <div className="container mx-auto px-4">
         
         {/* Galeria de Fotos */}
@@ -60,17 +60,20 @@ const ClientPhotos: React.FC = () => {
             </div>)}
         </div>
         
-        {/* ========================================================== */}
-        {/* SEÇÃO DE TEXTO E BOTÃO ESTILIZADA COMO NA REFERÊNCIA        */}
-        {/* ========================================================== */}
         <div className="text-center mt-16 max-w-3xl mx-auto">
-          <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed mb-10">
-            Já ajudei várias famílias a <span className="font-bold text-blue-600">vender e comprar</span> os seus imóveis de forma <span className="font-bold text-blue-600">segura, simples</span> e com total <span className="font-bold text-blue-600">transparência</span> sempre pelo melhor preço, sem surpresas e com confiança.
+          {/* ========================================================== */}
+          {/* ALTERAÇÃO 1: Adicionada a fonte Gotham ao texto.           */}
+          {/* ========================================================== */}
+          <p className="text-xl md:text-2xl text-gray-900 font-gotham font-medium leading-relaxed mb-10">
+            Já ajudei várias famílias a <span className="font-gotham font-black text-[#000EFF]">vender e comprar</span> os seus imóveis de forma <span className="font-gotham font-black text-[#000EFF]">segura, simples</span> e com total <span className="font-gotham font-black text-[#000EFF]">transparência</span> sempre pelo melhor preço, sem surpresas e com confiança.
           </p>
 
+          {/* ========================================================== */}
+          {/* ALTERAÇÃO 2: Adicionada a fonte e cor ao botão.            */}
+          {/* ========================================================== */}
           <Button 
             onClick={scrollToForm}
-            className="bg-blue-600 text-white font-bold text-lg md:text-xl py-6 px-10 rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+            className="bg-[#000EFF] text-white font-gotham font-black text-lg md:text-xl py-6 px-10 rounded-full hover:bg-[#000DB3] transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
             QUERO UMA AVALIAÇÃO 100% GRATUITA
           </Button>

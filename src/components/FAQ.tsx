@@ -3,59 +3,105 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import consultantImage3 from '@/assets/mariocaetano3.png';
 
 const FAQ: React.FC = () => {
+  // Usei backticks (`) para a string de múltiplas linhas para melhor legibilidade
   const faqs = [
-    { id: "item-1", question: "A avaliação é mesmo gratuita?", answer: "Sim, totalmente gratuita e sem qualquer compromisso. O objetivo é ajudá-lo a perceber o valor real do seu imóvel antes de tomar qualquer decisão." },
-    { id: "item-2", question: "Sou obrigado(a) a pôr o imóvel à venda depois da avaliação?", answer: "Não. A decisão é sempre sua. A avaliação serve apenas para o informar, sem qualquer tipo de pressão ou compromisso da sua parte." },
-    { id: "item-3", question: "Quem faz a avaliação?", answer: "A avaliação é feita por mim, Mário Caetano, consultor imobiliário com mais de 5 anos de experiência e responsável por mais de 150 imóveis vendidos com sucesso." },
-    { id: "item-4", question: "Quanto tempo demora até receber a avaliação?", answer: "Na maioria dos casos, recebo os dados e entrego a avaliação em menos de 24 horas úteis." },
-    { id: "item-5", question: "Preciso de preparar documentos ou fotos?", answer: "Não é obrigatório, mas qualquer detalhe extra (fotos, plantas) ajuda a tornar a avaliação mais precisa." },
-    { id: "item-6", question: "Se decidir vender, o que acontece a seguir?", answer: "Se quiser avançar, acompanho todo o processo: desde a preparação e promoção do imóvel, até à negociação e fecho da venda com segurança." },
-    { id: "item-7", question: "Em quanto tempo consigo vender a minha casa?", answer: "O tempo de venda depende de vários fatores. No entanto, o tempo médio com o meu acompanhamento ronda os 90 dias, com vários casos de sucesso em menos de 30 dias." },
+    { 
+      id: "item-1", 
+      question: "A avaliação é mesmo gratuita?", 
+      answer: "Sim, totalmente gratuita e sem qualquer compromisso. O objetivo é ajudá-lo a perceber o valor real do seu imóvel antes de tomar qualquer decisão." 
+    },
+    { 
+      id: "item-2", 
+      question: "Sou obrigado(a) a pôr o imóvel à venda depois da avaliação?", 
+      answer: "Não. A decisão é sempre sua. A avaliação serve apenas para o informar, sem qualquer tipo de pressão ou compromisso da sua parte." 
+    },
+    { 
+      id: "item-3", 
+      question: "Quem faz a avaliação?", 
+      answer: `A avaliação é feita por mim, Mário Caetano, consultor imobiliário com mais de 5 anos de experiência e responsável por mais de 150 imóveis vendidos com sucesso.
+
+      Tive o privilégio de ajudar centenas de famílias a comprar e vender casa com confiança, segurança e resultados reais.
+
+      Sou reconhecido como um dos consultores de referência na zona norte de Portugal, com vários prémios da RE/MAX Portugal.
+
+      Conto ainda com:
+
+      - Uma equipa especializada em marketing, fotografia e vídeo profissional, para destacar o seu imóvel da concorrência;
+
+      - Um vasto contacto de compradores qualificados, que procuram ativamente imóveis na região — o que facilita e acelera o processo de venda.
+
+      Se decidir avançar, pode contar comigo e com a minha equipa em todas as etapas — do primeiro contacto até à escritura.`
+    },
+    { 
+      id: "item-4", 
+      question: "Quanto tempo demora até receber a avaliação?", 
+      answer: "Na maioria dos casos, recebo os dados e entrego a avaliação em menos de 24 horas úteis. Em alguns casos específicos, posso entrar em contacto para pedir mais informações ou agendar uma visita ao imóvel." 
+    },
+    { 
+      id: "item-5", 
+      question: "Preciso de preparar documentos ou fotos?", 
+      answer: "Não é obrigatório, mas qualquer detalhe extra (fotos, plantas) ajuda a tornar a avaliação mais precisa." 
+    },
+    { 
+      id: "item-6", 
+      question: "Se decidir vender, o que acontece a seguir?", 
+      answer: "Se quiser avançar, acompanho todo o processo: desde a preparação e promoção do imóvel, com fotos, vídeos e anúncios profissionais, até à negociação com potenciais compradores e o fecho da venda com segurança e confiança." 
+    },
+    { 
+      id: "item-7", 
+      question: "Em quanto tempo consigo vender a minha casa?", 
+      answer: `Cada casa é uma casa, e o tempo de venda depende de vários fatores como a localização, o estado do imóvel, o preço e o momento do mercado.
+
+      No entanto, o tempo médio de venda com o meu acompanhamento ronda os 90 dias.
+
+      Já tive vários casos de sucesso em apenas 10 a 30 dias, graças a estratégias bem definidas, promoção profissional e à base de compradores qualificados que tenho à disposição.
+
+      O mais importante é fazer tudo bem desde o início — e é isso que eu e a minha equipa garantimos.` 
+    },
   ];
 
   return (
-    // A secção principal é relativa para ser o ponto de referência.
-    <section className="relative py-20 bg-white">
-      {/* ========================================================== */}
-      {/* 1. IMAGEM AGORA FICA FORA DO FLUXO NORMAL DO CONTEÚDO      */}
-      {/* ========================================================== */}
-      <img 
-        src={consultantImage3} 
-        alt="" // Decorativa
-        aria-hidden="true"
-        // No desktop ('lg'), fica fixa no canto esquerdo. Diminuí um pouco o tamanho para max-w-md
-        className="hidden lg:block absolute left-0 bottom-0 w-auto h-auto max-w-2xl z-0"
-      />
-      
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* ========================================================== */}
-        {/* 2. CONTEÚDO CENTRALIZADO SEMPRE                          */}
-        {/* ========================================================== */}
-        <div className="w-full max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              PERGUNTAS FREQUENTES
-            </h2>
+        
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-end gap-12">
+
+          <div className="flex-shrink-0">
+            <img 
+              src={consultantImage3} 
+              alt="Consultor Mário Caetano a apresentar"
+              aria-hidden="true"
+              className="hidden lg:block w-auto h-auto max-w-lg"
+            />
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-3">
-            {faqs.map((faq) => (
-              <AccordionItem 
-                key={faq.id} 
-                value={faq.id}
-                className="bg-[#0d1b2a] rounded-lg border-none"
-              >
-                <AccordionTrigger className="w-full text-white font-semibold text-lg py-4 px-6 hover:no-underline flex justify-center">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-gray-300">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="w-full max-w-lg">
+            
+            <Accordion type="single" collapsible className="w-full space-y-3">
+              {faqs.map((faq) => (
+                <AccordionItem 
+                  key={faq.id} 
+                  value={faq.id}
+                  className="bg-[#0d1b2a] rounded-lg border-none"
+                >
+                  <AccordionTrigger className="w-full text-white font-semibold justify-center text-lg text-center py-4 px-6 hover:no-underline [&>svg]:hidden">
+                    {faq.question}
+                  </AccordionTrigger>
+
+                  {/* ALTERAÇÃO APLICADA AQUI: 
+                    - whitespace-pre-line: Preserva as quebras de linha da string.
+                    - text-left: Alinha o texto à esquerda para melhor legibilidade.
+                  */}
+                  <AccordionContent className="px-6 pb-4 text-gray-300 text-left whitespace-pre-line">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
         </div>
-      </div>
+      </div>  
     </section>
   );
 };
