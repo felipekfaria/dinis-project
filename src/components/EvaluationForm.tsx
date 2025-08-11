@@ -110,7 +110,7 @@ const EvaluationForm: React.FC = () => {
         type="submit" 
         variant="cta" 
         size="lg" 
-        className="w-full !mt-6 text-xs sm:text-sm tracking-wider px-4 py-3 h-auto whitespace-normal leading-tight font-gotham font-black"
+        className="w-full !mt-6 text-xs sm:text-sm tracking-wider px-4 py-3 h-auto whitespace-normal leading-tight font-gotham font-black shadow-none hover:shadow-none"
       >
         QUERO UMA AVALIAÇÃO 100% GRATUITA
       </Button>
