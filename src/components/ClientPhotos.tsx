@@ -7,7 +7,6 @@ import newClient2 from '@/assets/491222308_1101358008684921_2827100385038073306_
 import newClient3 from '@/assets/491830053_1101363428684379_1585569211937320176_n.jpg';
 import newClient4 from '@/assets/512655082_1157126336441421_7653544097145515534_n.jpg';
 import newClient5 from '@/assets/WhatsAppimage.jpeg';
-
 const ClientPhotos: React.FC = () => {
   const clients = [{
     id: 1,
@@ -41,10 +40,11 @@ const ClientPhotos: React.FC = () => {
   const scrollToForm = () => {
     const formElement = document.getElementById('evaluation-form-section');
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
+      formElement.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   return <div className="py-16 bg-white">
       <div className="container mx-auto px-4">
         
@@ -71,15 +71,11 @@ const ClientPhotos: React.FC = () => {
           {/* ========================================================== */}
           {/* ALTERAÇÃO 2: Adicionada a fonte e cor ao botão.            */}
           {/* ========================================================== */}
-          <Button 
-            onClick={scrollToForm}
-            className="w-full md:w-auto inline-flex items-center justify-center font-gotham font-black text-base sm:text-lg md:text-xl px-6 md:px-10 py-4 md:py-6 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
+          <Button onClick={scrollToForm} className="w-full md:w-auto inline-flex items-center justify-center font-gotham font-black text-base sm:text-lg md:text-xl px-6 md:px-10 py-4 md:py-6 rounded-full text-primary-foreground transition-all duration-300 shadow-lg hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 bg-[#000eff]">
             QUERO UMA AVALIAÇÃO 100% GRATUITA
           </Button>
         </div>
       </div>
     </div>;
 };
-
 export default ClientPhotos;
