@@ -66,12 +66,12 @@ const FAQ: React.FC = () => {
         
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-end gap-12">
 
-          <div className="flex-shrink-0 w-full">
+          <div className="flex-shrink-0 w-full lg:w-auto">
             <img 
               src={consultantImage3} 
               alt="Consultor Mário Caetano a apresentar"
               loading="lazy"
-              className="block w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto mx-auto"
+              className="block w-full sm:max-w-sm md:max-w-md lg:w-auto lg:max-w-lg h-auto mx-auto lg:mx-0"
             />
           </div>
 
