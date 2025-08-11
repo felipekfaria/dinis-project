@@ -73,7 +73,7 @@ const ClientPhotos: React.FC = () => {
           {/* ========================================================== */}
           <Button 
             onClick={scrollToForm}
-            className="bg-[#000EFF] text-white font-gotham font-black text-lg md:text-xl py-6 px-10 rounded-full hover:bg-[#000DB3] transform hover:scale-105 transition-all duration-300 shadow-lg"
+            className="w-full md:w-auto inline-flex items-center justify-center font-gotham font-black text-base sm:text-lg md:text-xl px-6 md:px-10 py-4 md:py-6 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             QUERO UMA AVALIAÇÃO 100% GRATUITA
           </Button>
