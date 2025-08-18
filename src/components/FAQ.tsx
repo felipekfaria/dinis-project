@@ -17,7 +17,7 @@ const FAQ: React.FC = () => {
     },
     { 
       id: "item-3", 
-      question: "Quem faz a avaliação?", 
+      question: "Como é feita a avaliação?", 
       answer: `A avaliação é feita por mim, Mário Caetano, consultor imobiliário com mais de 5 anos de experiência e responsável por mais de 150 imóveis vendidos com sucesso.
 
       Tive o privilégio de ajudar centenas de famílias a comprar e vender casa com confiança, segurança e resultados reais.
