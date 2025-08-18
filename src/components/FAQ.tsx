@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
                 <AccordionItem 
                   key={faq.id} 
                   value={faq.id}
-                  className="bg-[#0d1b2a] rounded-lg border-none"
+                  className="bg-[#0d1b2a] rounded-lg border-2 border-[#000EFF]"
                 >
                   <AccordionTrigger className="w-full text-white font-gotham font-black justify-center text-lg text-center py-4 px-6 hover:no-underline [&>svg]:hidden">
                     {faq.question}
