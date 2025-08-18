@@ -6,6 +6,7 @@ import ScrollingText from '@/components/ScrollingText';
 import ClientPhotos from '@/components/ClientPhotos';
 import GoogleReviews from '@/components/GoogleReviews'; // Componente importado
 import FAQ from '@/components/FAQ';
+import Footer from '@/components/Footer';
 import consultantImage from '@/assets/mariocaetano.png';
 
 const Index = () => {
@@ -100,33 +101,7 @@ const Index = () => {
         </div>
       </section>*/}
 
-      <footer className="bg-gray-900 text-white/70">
-        <div className="container mx-auto px-4 py-12">
-            <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
-                <div className='flex-1'>
-                    <h3 className="text-xl font-bold text-white">Mário Caetano</h3>
-                    <p className="text-sm">Consultor Imobiliário</p>
-                </div>
-                <div className='flex-1 flex flex-col md:flex-row gap-4 md:gap-8 justify-center'>
-                    <a href="mailto:geral@mariocaetano.pt" className="flex items-center justify-center gap-2 hover:text-amber-400 transition-colors">
-                        <Mail size={16} />
-                        <span>geral@mariocaetano.pt</span>
-                    </a>
-                    <a href="tel:+351912345678" className="flex items-center justify-center gap-2 hover:text-amber-400 transition-colors">
-                        <Phone size={16} />
-                        <span>+351 912 345 678</span>
-                    </a>
-                </div>
-                <div className='flex-1 flex justify-center md:justify-end gap-6 text-sm'>
-                    <a href="/politica-de-privacidade" className="hover:text-white transition-colors">Política de Privacidade</a>
-                    <a href="/termos-e-condicoes" className="hover:text-white transition-colors">Termos e Condições</a>
-                </div>
-            </div>
-            <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs">
-                <p>© {new Date().getFullYear()} Mário Caetano | Todos os direitos reservados.</p>
-            </div>
-        </div>
-      </footer>
+      <Footer />
     </div>;
 };
 
