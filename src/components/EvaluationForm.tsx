@@ -63,7 +63,7 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="email" className="sr-only">Email</Label>
          <div className={inputContainerClass}>
             <Mail className={iconClass} />
-            <Input id="email" type="email" placeholder="seuemail@exemplo.com" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} className={inputClass} required />
+            <Input id="email" type="email" placeholder="oseueemail@exemplo.com" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
