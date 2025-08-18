@@ -71,7 +71,7 @@ const EvaluationForm: React.FC = () => {
         <Label htmlFor="telemovel" className="sr-only">Telemóvel</Label>
          <div className={inputContainerClass}>
             <Smartphone className={iconClass} />
-            <Input id="telemovel" type="tel" placeholder="+351 9xx xxx xxx" value={formData.telemovel} onChange={e => handleInputChange('telemovel', e.target.value)} className={inputClass} required />
+            <Input id="telemovel" type="tel" placeholder="O seu número" value={formData.telemovel} onChange={e => handleInputChange('telemovel', e.target.value)} className={inputClass} required />
         </div>
       </div>
 
