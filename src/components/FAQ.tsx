@@ -17,25 +17,25 @@ const FAQ: React.FC = () => {
     },
     { 
       id: "item-3", 
-      question: "Como é feita a avaliação?", 
-      answer: `A avaliação é feita por mim, Mário Caetano, consultor imobiliário com mais de 5 anos de experiência e responsável por mais de 150 imóveis vendidos com sucesso.
+      question: "Quem faz a avaliação?", 
+      answer: `A avaliação é feita por mim, Mário Caetano, consultor imobiliário com vastos anos de experiência e responsável por mais de 150 imóveis vendidos com sucesso.
 
-      Tive o privilégio de ajudar centenas de famílias a comprar e vender casa com confiança, segurança e resultados reais.
+        Tive o privilégio de ajudar centenas de famílias a comprar e vender casa com confiança, segurança e resultados reais.
 
-      Sou reconhecido como um dos consultores de referência na zona norte de Portugal, com vários prémios da RE/MAX Portugal.
+        Sou reconhecido como um dos consultores de referência de Portugal, com vários prémios da RE/MAX Portugal.
 
-      Conto ainda com:
+        Conto ainda com:
 
-      - Uma equipa especializada em marketing, fotografia e vídeo profissional, para destacar o seu imóvel da concorrência;
+        •⁠ Uma equipa especializada em marketing, fotografia e vídeo profissional, para destacar o seu imóvel da concorrência;
 
-      - Um vasto contacto de compradores qualificados, que procuram ativamente imóveis na região — o que facilita e acelera o processo de venda.
+        • Um vasto contacto de compradores qualificados, que procuram ativamente imóveis na região, o que facilita e acelera o processo de venda.
 
-      Se decidir avançar, pode contar comigo e com a minha equipa em todas as etapas — do primeiro contacto até à escritura.`
+        Se decidir avançar, pode contar comigo e com a minha equipa em todas as etapas  do primeiro contacto até à escritura.`
     },
     { 
       id: "item-4", 
-      question: "Quanto tempo demora até receber a avaliação?", 
-      answer: "Na maioria dos casos, recebo os dados e entrego a avaliação em menos de 24 horas úteis. Em alguns casos específicos, posso entrar em contacto para pedir mais informações ou agendar uma visita ao imóvel." 
+      question: "Como é feita a avaliação?", 
+      answer: "Na maioria dos casos e após visitar o imóvel entrego-lhe o resultado da avaliação em menos de 24h." 
     },
     { 
       id: "item-5", 
